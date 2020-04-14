@@ -1,0 +1,20 @@
+EL disparador para antes de introducir los datos
+
+
+
+delimiter //
+create trigger tipo before insert on libro
+for each row
+if NEW.yera < 1980 then
+	set NEW.categoria = 'DESCATALOGADO';
+end if;
+//
+
+El disparador para despues de introducir los datos
+delimiter //
+create trigger tipo after insert on personas
+for each row
+if generacion < 2001 then
+	set new.tipo = 1;
+end if;
+//
