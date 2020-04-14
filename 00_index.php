@@ -44,18 +44,7 @@
   <?PHP
   		
   		
-		$link=mysqli_connect("localhost","root","");
-        	mysqli_select_db($link,"classicmodels");
-		$result0=mysqli_query($link,"select customerNumber, creditLimit, AVG(CreditLimit) from customers group by customerNumber order by AVG(creditLimit) desc;");
-		while ($row=mysqli_fetch_array($result0))
-		{
-			$id=$row['customerNumber'];
-			$punto=$row['creditLimit'];	
-			$result5=mysqli_query($link,"select customerNumber, customerName  from customers where customerNumber=$id");
-			while ($row=mysqli_fetch_array($result5))
-			{
-				$libo=$row['customerName'];
-			}
+		
 			
 			echo '<p class="Estilo1 Estilo1">';
 			echo "Numero de Cliente:   <b>$libo</b>";
