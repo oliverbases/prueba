@@ -50,7 +50,7 @@
 			echo "Numero de Cliente:   <b>$libo</b>";
 		  	echo "       Credito:<big><b>$punto</b></big>";
 			echo "</p>";	
-		}
+		
 		
 		
 		
